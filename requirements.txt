@@ -1,0 +1,11 @@
+# Direct dependencies only; not a validated or frozen environment lock.
+numpy
+pandas
+scipy
+statsmodels
+patsy
+scikit-learn
+threadpoolctl
+matplotlib
+Pillow
+PyMuPDF

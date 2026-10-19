@@ -1,0 +1,122 @@
+{
+  "source_snapshot": "CTQ_复核修订_20261017",
+  "prepared_date": "2026-10-19",
+  "scope": "code, analysis plans and documentation only; no datasets or manuscript files",
+  "copied_files": [
+    {
+      "path": "code/README_figures.md",
+      "sha256": "d0c6b8bc66dc1aa5df6ae0c96b01026a4b5e45c14459fd2483bfdb1632346788",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "code/README_reproduction.md",
+      "sha256": "6a92b866a4b54ea8b2ccfec92a1eea13cb3ca9d9bb8afb281978cda9e8fc6d2c",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "code/build_current_figures.py",
+      "sha256": "7b7a24f9aebbf147b1715a3a33e356937ecd88051a1ab945c70e01b3e75e5adb",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "code/check_reproduction_inputs.py",
+      "sha256": "90a5aa43ed3f468b4f84bf118ea13e4e2d20a5faf100fe68f9e5d444e31195f4",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "code/export_high_score_support.py",
+      "sha256": "76c40df71f6e99ddf40eb83c08a49f631e75b3678d3e27dd33be8a6f637fd12e",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "code/figure_qa_tools/audit_figure_collisions.py",
+      "sha256": "841ede7dcaefa3ab11576b5ba52375d1678a71f77d39f553d5464e81b0699283",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "code/figure_qa_tools/audit_panel_alignment.py",
+      "sha256": "43958e6b49d897f326ff64e73cbed0bf057e17c06533b5b57d3dededf8111e76",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "code/figure_qa_tools/audit_pdf_text.py",
+      "sha256": "11b8f3ec50bc13e2bd8561eeb7cd204307f4ce5a70ac57fa24c809ce1b9c252c",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "code/figure_qa_tools/validate_figure.py",
+      "sha256": "c548e180d31fc1557cbfcd452ab78c7a969273a80b311068aa80acfe86ecfd90",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/compare_revision_outputs.py",
+      "sha256": "bfe993eb3f5338ea9471820b985bf95d97e5b98b05164c388192b5403f5cc620",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/post_review_20261015/POST_REVIEW_DIAGNOSTIC_ADDENDUM_20261015.md",
+      "sha256": "4dfe10e58b24ea12956fa68828b491af77cb06b30944c512ba431065ce2b776a",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/post_review_20261015/POST_REVIEW_PLAN_20261015.md",
+      "sha256": "f1225b922caf9581d77ece1153d963511fc4800fe1dd3ee9b89c60a72ae322f4",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/post_review_20261015/build_diagnostic_figure.py",
+      "sha256": "8f7dc4e35ed22a84b779d1301dadb2a14939f702f274db9ea05681a8c7d34cd5",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/post_review_20261015/dependencies/content_analysis_20261012.py",
+      "sha256": "eb0de7848322dfe66f89e652306f33cd155340515cf68988db1c36afd1bf5c07",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/post_review_20261015/diagnostic_addendum.py",
+      "sha256": "f6407bc3b22682454f49ab71649ebcfa5d2ce133598f9a3c8991305197f9b370",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/post_review_20261015/post_review_analysis.py",
+      "sha256": "2dcb31efe67e51b330ba0ab707f6e368519cca3c2cd4912b2196f4fa18cc2006",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/revision_20261012/CONTENT_PLAN.md",
+      "sha256": "e50407135ee684b335c6521a074deefd9611e113c5a2a1ef1236f622d3839c35",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/revision_20261012/IPW_PLAN.md",
+      "sha256": "32537fd3ba2a1f298d1157c06433f63255e95ecc816364369635e224bb6d1cd9",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/revision_20261012/content_analysis.py",
+      "sha256": "b5edfd62bf5c72d01741d4ed4ba23cfe467156b2353cafc349bca8756571e4b0",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/revision_20261012/ipw_analysis.py",
+      "sha256": "4feb19046782a7a5694f5c93879768f1410dac775adef9de984407f7665a47e8",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/revision_common.py",
+      "sha256": "99024c1d890a082916b02b87d08c4c3bc20304af22e60b26d6b8a5a8b6e2eb19",
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "archive/原临床分析代码/revision_runtime.py",
+      "sha256": "4b8fd7ad7c546ee11c0e2e4c11bbbbd8f3874f17e528418e81aa9e28682870ed",
+      "operation": "byte-identical copy"
+    }
+  ],
+  "adapted_metadata": [
+    "code/runtime_versions.json"
+  ],
+  "analysis_script_changes": false,
+  "models_fitted_during_repository_preparation": 0
+}
