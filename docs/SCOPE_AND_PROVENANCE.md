@@ -17,7 +17,7 @@ The statistical reference folders, model estimates, figure-source CSVs, manuscri
 - `code/check_reproduction_inputs.py` is the unchanged preflight for the complete local manuscript package. It intentionally expects files absent here and is not the code-only repository check.
 - `post_review_20261015/dependencies/content_analysis_20261012.py` is loaded by the post-review entry point and is not a separate command-line workflow.
 - `post_review_20261015/build_diagnostic_figure.py` is a historical figure helper; the current submission figure entry point is `code/build_current_figures.py`.
-- The four scripts in `code/figure_qa_tools/` were attributed in the supplied documentation to `nature-figure`. They are preserved rather than relabelled as original project code. No licence permissions have been inferred from their presence in the local package.
+- The four scripts in `code/figure_qa_tools/` are byte-identical to public upstream commit `8630593a086755d2003cbd1a79cd1118c6963202` of `Yuan1z0825/nature-skills`. Before the public release, their Apache-2.0 licence was verified and its full text added under `LICENSES/`, with fixed source links and hashes in `THIRD_PARTY_NOTICES.md`. They are preserved rather than relabelled as original project code. No repository-wide licence has been inferred from that component licence.
 
 ## Verification performed for repository preparation
 

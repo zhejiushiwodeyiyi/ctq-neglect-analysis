@@ -92,6 +92,6 @@ This repository does not claim to contain an executable reimplementation of ever
 
 ## Attribution and access
 
-The figure QA helpers were supplied with the manuscript package and attributed there to the `nature-figure` skill. Their original code is preserved. No blanket open-source licence is assigned here; this snapshot does not assert sole authorship or relicensing rights for those helpers. Review ownership and applicable terms before public redistribution.
+The four figure QA helpers are unchanged copies of files in `Yuan1z0825/nature-skills` at commit `8630593a086755d2003cbd1a79cd1118c6963202`, distributed under Apache-2.0. Their complete upstream licence is included in [LICENSES/nature-figure-Apache-2.0.txt](LICENSES/nature-figure-Apache-2.0.txt); file-level provenance is documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Original source notices are preserved. This licence applies to those helpers; no blanket licence is assigned to the project-specific research code.
 
-The GitHub repository was initially created as private. Data access, software access and any future public release are separate decisions. A private repository URL alone is not a public code-availability statement.
+The repository is publicly accessible at https://github.com/zhejiushiwodeyiyi/ctq-neglect-analysis following the author's release instruction on 19 October 2026. Participant-level data and frozen result inputs remain excluded. Public code access does not grant access to research data or establish that the omitted inputs may be shared.
