@@ -2,7 +2,7 @@
 
 Analysis and figure code for **Childhood neglect and subsequent emotional distress across symptom domains in school-aged youth**.
 
-本仓库保存 SEARCH 学校问卷论文的统计分析、图件生成、核查代码和分析计划。代码取自 2026-10-17 复核修订包，原统计与绘图脚本保持不变。仓库不包含参与者问卷、原始数据、录音、汇总结果、论文或图件；创建仓库时未重新拟合模型。
+本仓库保存 SEARCH 学校问卷论文的统计分析、图件生成、核查代码和分析计划。历史代码取自 2026-10-17 复核修订包并保持不变；2026-10-20 增加了事后、范围受限的忽视函数形式敏感性分析脚本和分析计划。仓库不包含参与者问卷、原始数据、录音、汇总结果、论文或图件。
 
 This repository is a code snapshot, not a self-contained data reproduction package. The participant-level questionnaire data and frozen reference inputs remain in the authorized local research package. Repository creation does not grant permission to share those inputs.
 
@@ -12,6 +12,8 @@ This repository is a code snapshot, not a self-contained data reproduction packa
 | --- | --- |
 | `code/build_current_figures.py` | Prepare aggregate figure sources and current figures from an existing local source package; no model fitting |
 | `code/export_high_score_support.py` | Export school-level support summaries from authorized local questionnaire data |
+| `code/run_model_form_sensitivity.py` | Refit three fixed neglect-function specifications and original-spline leave-one-school-out diagnostics; aggregate outputs only |
+| `code/CTQ_MODEL_FORM_PLAN_20261020.md` | Post-result exploratory analysis plan saved before those diagnostic fits |
 | `code/figure_qa_tools/` | Figure alignment, PDF text and collision checks |
 | `archive/原临床分析代码/revision_20261012/` | Common-prior content, four-subscale and follow-up/IPW analyses and their dated plans |
 | `archive/原临床分析代码/post_review_20261015/` | Grade-restricted common-prior comparisons, spline and influence diagnostics, and the diagnostic addendum |
@@ -80,11 +82,24 @@ python3 code/build_current_figures.py \
   --audit-scripts code/figure_qa_tools
 ```
 
+The later model-form diagnostic uses the same corrected 22,265-row questionnaire table and retains the original 4,219-person paired sample. It also requires three authorized **aggregate** inputs: the historical `spline_knots.json`, `manuscript_scaling.json`, and the frozen `fig3_conditional_difference_curves.csv`. These inputs are not in this public code snapshot. Pass their local paths explicitly; the script checks the participant-table SHA-256 and reproduces the frozen original-spline contrasts before writing new aggregate outputs. The `--output` directory must not already exist:
+
+```sh
+python3 code/run_model_form_sensitivity.py \
+  --data /path/to/authorized/questionnaire_analysis.csv \
+  --knots /path/to/authorized/spline_knots.json \
+  --scaling /path/to/authorized/manuscript_scaling.json \
+  --frozen /path/to/authorized/fig3_conditional_difference_curves.csv \
+  --output /path/to/new-model-form-output
+```
+
+This exploratory check was specified after the original model discrepancy was known. It does not select a preferred model by significance, validate a clinical threshold, or independently reproduce questionnaire collection and scoring.
+
 The scripts in `code/README_reproduction.md` and `code/README_figures.md` describe the original full local package, including inputs deliberately omitted here. In particular, `code/check_reproduction_inputs.py` checks that full package and will report missing inputs in a fresh code-only clone. Use `scripts/check_repository.py` for this repository's data-free checks.
 
 ## Interpretation and scope
 
-The current main symptom-content comparisons use common-prior adjustment. Overall distress retains the previously specified linear-versus-spline comparison. Own-prior and earlier-interval content analyses have different adjustment specifications and are not identical replications of the common-prior model.
+The current main symptom-content comparisons use common-prior adjustment. Overall distress retains the previously specified linear-versus-spline comparison; the October 20 checks supplement it without replacing its central 17-versus-10 contrast. Own-prior and earlier-interval content analyses have different adjustment specifications and are not identical replications of the common-prior model.
 
 The historical `post_review_analysis.py` still reads adult aggregate constants to preserve its historical scaling-register output. Those reference inputs and adult rows are not part of the current manuscript's active analyses. See [docs/SCOPE_AND_PROVENANCE.md](docs/SCOPE_AND_PROVENANCE.md) before running or interpreting historical outputs.
 
