@@ -23,6 +23,10 @@ REQUIRED = [
     'code/specificity_20261020/ancillary_checks.py',
     'code/specificity_20261020/verify_run.py',
     'code/specificity_20261020/build_figure_s4.py',
+    'code/mnar_20261020/ANALYSIS_PLAN.md',
+    'code/mnar_20261020/README.md',
+    'code/mnar_20261020/run_mnar_sensitivity.py',
+    'code/build_figureS5_followup_flow.py',
 ]
 ALLOWED_SUFFIXES = {'.py', '.md', '.json', '.txt'}
 SKIP_PARTS = {'.git', '.venv', 'venv', '__pycache__', 'matplotlib_cache', 'font_cache'}

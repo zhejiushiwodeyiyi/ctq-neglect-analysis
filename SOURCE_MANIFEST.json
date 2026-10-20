@@ -118,5 +118,32 @@
     "code/runtime_versions.json"
   ],
   "analysis_script_changes": false,
-  "models_fitted_during_repository_preparation": 0
+  "models_fitted_during_repository_preparation": 0,
+  "later_additions_20261020": [
+    {
+      "path": "code/mnar_20261020/ANALYSIS_PLAN.md",
+      "sha256": "768a9bd3328d0b46edb7d0251169ca095e915fa51f6c52414dbf9d73a668abd3",
+      "operation": "added for post-result follow-up sensitivity and Figure S5"
+    },
+    {
+      "path": "code/mnar_20261020/README.md",
+      "sha256": "9cc895ec3a5d64a9fe3b180d4a06c638e6170d4ce066211b26df5530cbc622c0",
+      "operation": "added for post-result follow-up sensitivity and Figure S5"
+    },
+    {
+      "path": "code/mnar_20261020/requirements.txt",
+      "sha256": "c075e7af75639a3dcc6b543a2cc9346de424e3024d1b6f9a4d50cd8231f05eee",
+      "operation": "added for post-result follow-up sensitivity and Figure S5"
+    },
+    {
+      "path": "code/mnar_20261020/run_mnar_sensitivity.py",
+      "sha256": "c83b391d56e8e8d6960f4ee00a6040ad0fb5e360348a3ccb6b9146632e0650a9",
+      "operation": "added for post-result follow-up sensitivity and Figure S5"
+    },
+    {
+      "path": "code/build_figureS5_followup_flow.py",
+      "sha256": "26228e0ae8fc53f72b47fe3a77fb3e731a395c2afdcad310147d594eee501a8d",
+      "operation": "added for post-result follow-up sensitivity and Figure S5"
+    }
+  ]
 }

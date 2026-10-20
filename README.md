@@ -2,7 +2,7 @@
 
 Analysis and figure code for **Childhood neglect and subsequent emotional distress across symptom domains in school-aged youth**.
 
-本仓库保存 SEARCH 学校问卷论文的统计分析、图件生成、核查代码和分析计划。历史代码取自 2026-10-17 复核修订包并保持不变；2026-10-20 增加了事后、范围受限的忽视函数形式和症状内容对比分析代码。仓库不包含参与者问卷、原始数据、录音、汇总结果、论文或图件。
+本仓库保存 SEARCH 学校问卷论文的统计分析、图件生成、核查代码和分析计划。历史代码取自 2026-10-17 复核修订包并保持不变；2026-10-20 增加了事后、范围受限的忽视函数形式、症状内容对比和随访缺失情景分析代码。仓库不包含参与者问卷、原始数据、录音、汇总结果、论文或图件。
 
 This repository is a code snapshot, not a self-contained data reproduction package. The participant-level questionnaire data and frozen reference inputs remain in the authorized local research package. Repository creation does not grant permission to share those inputs.
 
@@ -15,6 +15,8 @@ This repository is a code snapshot, not a self-contained data reproduction packa
 | `code/run_model_form_sensitivity.py` | Refit three fixed neglect-function specifications and original-spline leave-one-school-out diagnostics; aggregate outputs only |
 | `code/CTQ_MODEL_FORM_PLAN_20261020.md` | Post-result exploratory analysis plan saved before those diagnostic fits |
 | `code/specificity_20261020/` | Portable CLI adaptations of the seven-item measurement, bounded-mean, ancillary and verification analyses; Figure S4 renderer; path-scrubbed post-result plan |
+| `code/mnar_20261020/` | Post-result observed-support missing-outcome scenario plan and portable aggregate-only analysis script |
+| `code/build_figureS5_followup_flow.py` | Figure S5 matching-flow renderer; requires local aggregate count input |
 | `code/figure_qa_tools/` | Figure alignment, PDF text and collision checks |
 | `archive/原临床分析代码/revision_20261012/` | Common-prior content, four-subscale and follow-up/IPW analyses and their dated plans |
 | `archive/原临床分析代码/post_review_20261015/` | Grade-restricted common-prior comparisons, spline and influence diagnostics, and the diagnostic addendum |
@@ -104,6 +106,15 @@ script-by-script input list, commands, portability validation and limits are
 in [code/specificity_20261020/README.md](code/specificity_20261020/README.md).
 Its local measurement output contains small item-category counts; those
 outputs, Figure S4 and its source-data CSVs are deliberately absent here.
+
+The later follow-up sensitivity considers only 300 unmatched students within
+the 4,519-person school-by-grade domain with any matched wave-3 outcome. It
+uses explicitly hypothetical bounded conditional means, not recovered
+responses, and reports scenario point estimates without confidence intervals
+or P values. It cannot recover the unsupported school or baseline grades.
+Its command, assumptions and source boundary are documented in
+[code/mnar_20261020/README.md](code/mnar_20261020/README.md). Figure S5
+is rendered from aggregate counts in the local manuscript package.
 
 The scripts in `code/README_reproduction.md` and `code/README_figures.md` describe the original full local package, including inputs deliberately omitted here. In particular, `code/check_reproduction_inputs.py` checks that full package and will report missing inputs in a fresh code-only clone. Use `scripts/check_repository.py` for this repository's data-free checks.
 
