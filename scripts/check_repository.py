@@ -16,6 +16,13 @@ REQUIRED = [
     'archive/原临床分析代码/post_review_20261015/dependencies/content_analysis_20261012.py',
     'code/build_current_figures.py',
     'code/figure_qa_tools/audit_panel_alignment.py',
+    'code/specificity_20261020/ANALYSIS_PLAN.md',
+    'code/specificity_20261020/README.md',
+    'code/specificity_20261020/measurement_audit.py',
+    'code/specificity_20261020/bounded_models.py',
+    'code/specificity_20261020/ancillary_checks.py',
+    'code/specificity_20261020/verify_run.py',
+    'code/specificity_20261020/build_figure_s4.py',
 ]
 ALLOWED_SUFFIXES = {'.py', '.md', '.json', '.txt'}
 SKIP_PARTS = {'.git', '.venv', 'venv', '__pycache__', 'matplotlib_cache', 'font_cache'}

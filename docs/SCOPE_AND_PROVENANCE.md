@@ -22,3 +22,26 @@ The statistical reference folders, model estimates, figure-source CSVs, manuscri
 ## Verification performed for repository preparation
 
 Only code syntax, copied-file hashes, required code paths and upload file scope were checked. No analysis module was imported, no participant data were read into a statistical pipeline, no model was refitted and no bootstrap calculation was run.
+
+## Subsequent 20 October content-comparison release
+
+`code/specificity_20261020/` was added after the code-only repository was first
+prepared. Its five Python files are **adaptations**, not entries in the
+byte-identical `SOURCE_MANIFEST.json`: the four executed analytical/checking
+scripts were converted from machine-specific paths to explicit CLI inputs,
+and the Figure S4 renderer now reads aggregate inputs via CLI and imports
+the already attributed panel-alignment helper from this repository. The
+path-scrubbed analysis plan preserves the original post-result decisions but
+is not byte-identical to the local plan. The original locked plan hash and
+input checks remain documented in the code and subdirectory README.
+
+The portable scripts were run locally with the authorized original inputs,
+writing only to a temporary directory outside the repository. All ten shared
+aggregate CSV outputs matched the original executed run field by field,
+including every shared numeric value. The Figure S4 source CSVs and 600-dpi
+PNG matched the submission-package files byte for byte. `verify_run.py`
+passed with the original plan and prior Word hashes checked. This validates
+the path adaptation against that run; it does not independently confirm the
+clinical construct or authorize public release of the underlying inputs,
+figures, or small-cell aggregate outputs. None of those outputs was added to
+the repository.

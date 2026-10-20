@@ -2,7 +2,7 @@
 
 Analysis and figure code for **Childhood neglect and subsequent emotional distress across symptom domains in school-aged youth**.
 
-本仓库保存 SEARCH 学校问卷论文的统计分析、图件生成、核查代码和分析计划。历史代码取自 2026-10-17 复核修订包并保持不变；2026-10-20 增加了事后、范围受限的忽视函数形式敏感性分析脚本和分析计划。仓库不包含参与者问卷、原始数据、录音、汇总结果、论文或图件。
+本仓库保存 SEARCH 学校问卷论文的统计分析、图件生成、核查代码和分析计划。历史代码取自 2026-10-17 复核修订包并保持不变；2026-10-20 增加了事后、范围受限的忽视函数形式和症状内容对比分析代码。仓库不包含参与者问卷、原始数据、录音、汇总结果、论文或图件。
 
 This repository is a code snapshot, not a self-contained data reproduction package. The participant-level questionnaire data and frozen reference inputs remain in the authorized local research package. Repository creation does not grant permission to share those inputs.
 
@@ -14,6 +14,7 @@ This repository is a code snapshot, not a self-contained data reproduction packa
 | `code/export_high_score_support.py` | Export school-level support summaries from authorized local questionnaire data |
 | `code/run_model_form_sensitivity.py` | Refit three fixed neglect-function specifications and original-spline leave-one-school-out diagnostics; aggregate outputs only |
 | `code/CTQ_MODEL_FORM_PLAN_20261020.md` | Post-result exploratory analysis plan saved before those diagnostic fits |
+| `code/specificity_20261020/` | Portable CLI adaptations of the seven-item measurement, bounded-mean, ancillary and verification analyses; Figure S4 renderer; path-scrubbed post-result plan |
 | `code/figure_qa_tools/` | Figure alignment, PDF text and collision checks |
 | `archive/原临床分析代码/revision_20261012/` | Common-prior content, four-subscale and follow-up/IPW analyses and their dated plans |
 | `archive/原临床分析代码/post_review_20261015/` | Grade-restricted common-prior comparisons, spline and influence diagnostics, and the diagnostic addendum |
@@ -94,6 +95,15 @@ python3 code/run_model_form_sensitivity.py \
 ```
 
 This exploratory check was specified after the original model discrepancy was known. It does not select a preferred model by significance, validate a clinical threshold, or independently reproduce questionnaire collection and scoring.
+
+The subsequent symptom-content check is also post-result exploratory. It uses
+the same fixed 4,219-student paired sample for its four model-form cells,
+with school-cluster intervals, and separately reports measurement, early
+interval, grade, school-influence and observed-support IPW diagnostics. The
+script-by-script input list, commands, portability validation and limits are
+in [code/specificity_20261020/README.md](code/specificity_20261020/README.md).
+Its local measurement output contains small item-category counts; those
+outputs, Figure S4 and its source-data CSVs are deliberately absent here.
 
 The scripts in `code/README_reproduction.md` and `code/README_figures.md` describe the original full local package, including inputs deliberately omitted here. In particular, `code/check_reproduction_inputs.py` checks that full package and will report missing inputs in a fresh code-only clone. Use `scripts/check_repository.py` for this repository's data-free checks.
 
