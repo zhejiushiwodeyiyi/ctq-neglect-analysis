@@ -66,6 +66,10 @@ def main():
         path = ROOT / record['path']
         if not path.is_file() or sha256(path.read_bytes()).hexdigest() != record['sha256']:
             failures.append(f'Copied source fingerprint changed: {record["path"]}')
+    for record in manifest.get('adapted_files_20261021', []):
+        path = ROOT / record['path']
+        if not path.is_file() or sha256(path.read_bytes()).hexdigest() != record['sha256']:
+            failures.append(f'Adapted source fingerprint changed: {record["path"]}')
     for path in files:
         if path.suffix in ALLOWED_SUFFIXES and path.name != 'check_repository.py':
             text = path.read_text(encoding='utf-8')
@@ -76,6 +80,7 @@ def main():
         'checked_files': len(files),
         'python_scripts_parsed_without_import': sum(p.suffix == '.py' for p in files),
         'unchanged_copied_sources': len(manifest['copied_files']),
+        'checked_adapted_sources_20261021': len(manifest.get('adapted_files_20261021', [])),
         'participant_data_included': False if not failures else 'inspect failures',
         'analysis_modules_imported': False,
         'models_fitted': 0,

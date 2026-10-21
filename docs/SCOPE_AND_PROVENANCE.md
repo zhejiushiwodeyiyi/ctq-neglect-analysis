@@ -45,3 +45,15 @@ the path adaptation against that run; it does not independently confirm the
 clinical construct or authorize public release of the underlying inputs,
 figures, or small-cell aggregate outputs. None of those outputs was added to
 the repository.
+
+## 21 October Figure 1 wording clarification
+
+`code/build_current_figures.py` now labels its historical Figure 2 export as
+matched wave-3 records in panel a (the manuscript calls this Figure 1).
+The previous “observed follow-up” label could imply that every unmatched
+record represented nonresponse. Only four text strings changed. The
+participant counts, source CSVs, fitted analyses and plotted geometry were
+unchanged. `SOURCE_MANIFEST.json` records both the original fingerprint and
+the adapted file fingerprint. A local rebuild using the authorized source
+package produced the same three figure-source CSVs byte for byte and passed
+the panel-alignment check; no model was fitted for this label correction.

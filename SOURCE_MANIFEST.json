@@ -14,11 +14,6 @@
       "operation": "byte-identical copy"
     },
     {
-      "path": "code/build_current_figures.py",
-      "sha256": "7b7a24f9aebbf147b1715a3a33e356937ecd88051a1ab945c70e01b3e75e5adb",
-      "operation": "byte-identical copy"
-    },
-    {
       "path": "code/check_reproduction_inputs.py",
       "sha256": "90a5aa43ed3f468b4f84bf118ea13e4e2d20a5faf100fe68f9e5d444e31195f4",
       "operation": "byte-identical copy"
@@ -118,7 +113,16 @@
     "code/runtime_versions.json"
   ],
   "analysis_script_changes": false,
+  "figure_label_changes_20261021": true,
   "models_fitted_during_repository_preparation": 0,
+  "adapted_files_20261021": [
+    {
+      "path": "code/build_current_figures.py",
+      "sha256": "d466f98c5d77a00bea2a495a0a37f6c52be4558053c86ad58e70eb9e1b93257e",
+      "previous_sha256": "7b7a24f9aebbf147b1715a3a33e356937ecd88051a1ab945c70e01b3e75e5adb",
+      "operation": "four figure-label strings changed; no data, geometry, or statistical model change"
+    }
+  ],
   "later_additions_20261020": [
     {
       "path": "code/mnar_20261020/ANALYSIS_PLAN.md",

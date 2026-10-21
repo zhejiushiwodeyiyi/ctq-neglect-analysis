@@ -209,7 +209,7 @@ def save(fig,name,panel_axes,panel_ids,row_groups=None,column_groups=None,exempt
 # Figure 2 (180 x 136 mm), equal plot areas for the upper diagnostic panels.
 width_mm=180.0
 fig=plt.figure(figsize=(width_mm/25.4,136/25.4))
-label(fig,2,2,'a','Observed follow-up by grade')
+label(fig,2,2,'a','Matched wave-3 records by grade')
 ax_a=axes(fig,30,14,52,66)
 for i,r in enumerate(ret.itertuples()):
     pct=float(r.mean)*100
@@ -218,14 +218,14 @@ for i,r in enumerate(ret.itertuples()):
               edgecolor=BLACK,lw=.45,hatch=None if pct else '////')
 ax_a.set(ylim=(8.5,-.6),xlim=(0,100),xticks=[0,50,100],xlabel='Students (%)')
 ax_a.set_yticks(range(9),[f'{int(r.grade)}   {int(r.sum):,}/{int(r.size):,}' for r in ret.itertuples()])
-fig.text(4/180,1-11/136,'Grade  Observed / n',fontsize=6,ha='left',va='bottom')
+fig.text(4/180,1-11/136,'Grade  Matched / n',fontsize=6,ha='left',va='bottom')
 ax_a.tick_params(axis='y',length=0)
 ax_a.spines['left'].set_visible(False)
-fig.legend(handles=[Patch(facecolor='#8BCF8B',label='Observed'),Patch(facecolor='#CFCECE',label='Not observed'),
+fig.legend(handles=[Patch(facecolor='#8BCF8B',label='Matched record'),Patch(facecolor='#CFCECE',label='No matched record'),
                     Patch(facecolor='white',edgecolor=BLACK,hatch='////',label='Grades 6, 9, 12')],
            loc='upper left',bbox_to_anchor=(.13,.365),ncol=1,fontsize=6)
 
-label(fig,92,2,'b','Baseline follow-up profile')
+label(fig,92,2,'b','Baseline matching profile')
 ax_b=axes(fig,124,14,52,66)
 order=smd.loc[smd.comparison.eq('All wave-2 students'),'variable'].tolist()
 for i,v in enumerate(order):

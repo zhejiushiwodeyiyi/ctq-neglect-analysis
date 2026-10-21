@@ -118,6 +118,11 @@ is rendered from aggregate counts in the local manuscript package.
 
 The scripts in `code/README_reproduction.md` and `code/README_figures.md` describe the original full local package, including inputs deliberately omitted here. In particular, `code/check_reproduction_inputs.py` checks that full package and will report missing inputs in a fresh code-only clone. Use `scripts/check_repository.py` for this repository's data-free checks.
 
+On 21 October, the current Figure 1 builder received a label-only clarification:
+the follow-up panel now says “matched wave-3 records.” Its three figure-source
+CSVs were confirmed byte-identical before and after the change; no analysis
+model was rerun. See [docs/SCOPE_AND_PROVENANCE.md](docs/SCOPE_AND_PROVENANCE.md).
+
 ## Interpretation and scope
 
 The current main symptom-content comparisons use common-prior adjustment. Overall distress retains the previously specified linear-versus-spline comparison; the October 20 checks supplement it without replacing its central 17-versus-10 contrast. Own-prior and earlier-interval content analyses have different adjustment specifications and are not identical replications of the common-prior model.
